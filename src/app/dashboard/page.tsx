@@ -1,6 +1,5 @@
 import { Outfit } from "next/font/google";
 import Image from "next/image";
-import styles from "./dashboard.css";
 
 const outfit = Outfit({
   subsets: ["latin-ext"],
@@ -9,11 +8,12 @@ const outfit = Outfit({
 export default function Page() {
   return (
     <>
-      <main className="flex">
+      <main>
         {/* title hero */}
         <div
-          className=" md:h-full 2xl:h-2/3 absolute top-0 left-0 right-0 flex justify-center items-center px-36"
+          className=" md:h-full 2xl:h-2/3 absolute top-0 left-0 right-0 flex justify-center "
           style={{
+            // gives the yellow background a slanted edge
             clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 15vw))",
             backgroundImage: "url('/static/img/yellow_bg.png')",
             backgroundSize: "cover",
@@ -21,14 +21,13 @@ export default function Page() {
           }}
         >
           {/* left of landing hero */}
-          <div className="max-w-screen-xl flex items-center">
+          <div className="flex flex-row items-center flex-col lg:flex-row p-10 md:p-20">
             <div className="w-full">
-              <h1 className={`${outfit.className} text-8xl text-neutral-800`}>
+              <h1 className={`${outfit.className} text-5xl sm:text-6xl md:text-8xl  text-neutral-800`}>
                 Ellis Collinson
               </h1>
               <h2
-                className={`${outfit.className} font-sans text-5xl text-neutral-700`}
-              >
+                className={`${outfit.className} font-sans text-3xl lg:5xl text-neutral-700`}>
                 My snazzy portfolio
               </h2>
             </div>
@@ -44,7 +43,6 @@ export default function Page() {
           </div>
         </div>
         </div>
-        <div className="flex h-full items-center justify-center"></div>
       </main>
     </>
   );
