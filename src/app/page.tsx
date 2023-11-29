@@ -9,6 +9,33 @@ const outfit = Outfit({
 export default function Page() {
   return (
     <>
+      {/* background holder */}
+      <div className="bg-orange-500 flex justify-center">
+        {/* container */}
+        <div className="bg-blue-500 container mx-5 md:mx-10 h-screen grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-3">
+        <div className="bg-gray-500 absolute container h-12">Header</div>
+          <div className="bg-pink-500 col-span-3 flex justify-center flex-col py-16 lg:py-0">
+            <h1>Portfolio Site</h1>
+            <h2>Made by Ellis Collinson</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores
+              atque quae autem fugiat doloremque? Quisquam voluptas, voluptatum,
+              quibusdam.
+            </p>
+          </div>
+          <div className="bg-yellow-500 col-span-2 flex justify-center flex-col items-center ">
+            <Image
+              src="/static/img/cathedral.png"
+              alt="cathedral"
+              width="250"
+              height="250"
+              className="h-full w-auto lg:h-auto lg:w-72 "
+            />
+          </div>
+        </div>
+      </div>
+
       <main className="h-screen">
         <Header />
         {/* title hero */}
@@ -23,7 +50,7 @@ export default function Page() {
           }}
         >
           {/* left of landing hero */}
-          <div className="flex flex-row items-center flex-col lg:flex-row w-full max-w-screen-xl xl:p-0 p-20">
+          <div className="flex flex-row items-center flex-col lg:flex-row w-full max-w-screen-xl xl:p-0 sm:p-20 p-10">
             <div className="w-full">
               <h1
                 className={`${outfit.className} text-5xl lg:text-7xl text-neutral-800`}
@@ -76,7 +103,9 @@ export default function Page() {
             backgroundColor: "#EDEDED",
           }}
         >
-          <h1 className={`text-5xl font-normal ${outfit.className}`}>Some fluff here</h1>
+          <h1 className={`text-5xl font-normal ${outfit.className}`}>
+            Some fluff here
+          </h1>
           <div className="flex flex-row items-center flex-col lg:flex-row w-full max-w-screen-xl xl:p-0 px-20 grid-cols-3 grid gap-8">
             <div className="bg-red-400">
               <img src="/static/img/emo.png" alt="cathedral" />

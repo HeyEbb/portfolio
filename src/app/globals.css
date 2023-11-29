@@ -25,10 +25,9 @@ body {
 }
 
 h1 {
-  margin-bottom: 1rem;
-  font-weight: 700;
+  @apply text-6xl font-bold mb-2 ;
 }
 
 h2 {
-  margin-bottom: 1rem;
+  @apply text-3xl font-bold mb-2;
 }
