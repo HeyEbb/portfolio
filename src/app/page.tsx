@@ -10,11 +10,20 @@ export default function Page() {
   return (
     <>
       {/* background holder */}
-      <div className="bg-orange-500 flex justify-center">
+      <section
+        className="flex justify-center"
+        style={{
+          // gives the yellow background a slanted edge
+          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 25vw))",
+          backgroundImage: "url('/static/img/yellow_bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         {/* container */}
-        <div className="bg-blue-500 container mx-5 md:mx-10 h-screen grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-3">
-        <div className="bg-gray-500 absolute container h-12">Header</div>
-          <div className="bg-pink-500 col-span-3 flex justify-center flex-col py-16 lg:py-0">
+        <div className="container mx-5 md:mx-10 h-screen grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-3">
+          <div className="bg-gray-500 absolute container h-12">Header</div>
+          <div className=" col-span-3 flex justify-center flex-col py-16 lg:py-0">
             <h1>Portfolio Site</h1>
             <h2>Made by Ellis Collinson</h2>
             <p>
@@ -24,17 +33,45 @@ export default function Page() {
               quibusdam.
             </p>
           </div>
-          <div className="bg-yellow-500 col-span-2 flex justify-center flex-col items-center ">
+          <div className="col-span-2 flex justify-center flex-col items-center ">
             <Image
               src="/static/img/cathedral.png"
               alt="cathedral"
-              width="250"
-              height="250"
-              className="h-full w-auto lg:h-auto lg:w-72 "
+              width="450"
+              height="450"
+              className="h-full w-auto lg:h-auto "
             />
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* second */}
+      <section className="flex justify-center">
+        <div className="container flex justify-center h-96 items-center p-10 sm:p-20 md:p-40 lg:p-60 flex-col">
+          <h3> web design and development is my thing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores
+            atque quae autem fugiat doloremque? Quisquam voluptas, voluptatum,
+            quibusdam, quos voluptate dolorum asperiores atque quae autem fugiat
+            doloremque? Quisquam voluptas, voluptatum, quibusdam, quos voluptate
+            dolorum asperiores atque quae autem fugiat doloremque?
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="tw-bg-blue-500 w-full h-screen "
+        style={{
+          // gives the yellow background a slanted edge
+          clipPath: "polygon(100% calc(25vw), 0 0, 0 100%, 100% 100%)",
+          backgroundColor: "#EDEDED",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        Hii
+      </section>
 
       <main className="h-screen">
         <Header />
