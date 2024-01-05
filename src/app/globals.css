@@ -25,11 +25,11 @@ body {
 }
 
 h1 {
-  @apply text-8xl font-bold mb-2 text-neutral-900
+  @apply text-7xl font-bold mb-2 text-neutral-900
 }
 
 h2 {
-  @apply text-4xl font-light mb-5 text-neutral-800;
+  @apply text-3xl font-light mb-5 text-neutral-800;
 }
 
 h3 {

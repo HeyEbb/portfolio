@@ -13,22 +13,22 @@ export default function Page() {
     <>
       {/* background holder */}
       <section
-        className="flex justify-center"
+        className="flex justify-center h-[750px] 2xl:h-[900px] w-full"
         style={{
           // gives the yellow background a slanted edge
-          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 25vw))",
+          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 15vw))",
           backgroundImage: "url('/static/img/yellow_bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         {/* container */}
-        <div className="container mx-5 md:mx-10 h-screen grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-3">
+        <div className="container mx-5 md:mx-10 h-full flex flex-col xl:flex-row items-center">
           {/* <div className={`bg-gray-500 absolute container h-12`}>Header</div> */}
           <div
-            className={`${outfit.className} col-span-3 flex justify-center flex-col py-16 lg:py-0 pr-36`}
+            className={`${outfit.className} flex flex-col w-2/3 pr-20`}
           >
-            <h1>Hey there, I'm Ellis Collinson</h1>
+            <h1>Hey there, Im Ellis Collinson</h1>
             <h2>A portfolio built with love (and Next.js).</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -39,15 +39,13 @@ export default function Page() {
               voluptate dolorum asperiores atque quae autem fugiat doloremque?
             </p>
           </div>
-          <div className="col-span-2 flex justify-center flex-col items-center ">
             <Image
               src="/static/img/ellis.png"
               alt="cathedral"
               width="450"
               height="450"
-              className="h-full w-auto lg:h-auto "
+              className="h-full w-5/12 lg:h-auto "
             />
-          </div>
         </div>
       </section>
 
@@ -78,7 +76,7 @@ export default function Page() {
           backgroundPosition: "center",
         }}
       >
-        <h4>I'm also pretty good at other stuff.</h4>
+        <h4>Im also pretty good at other stuff.</h4>
         <div className="columns-3">
           <div className="w-96 bg-yellow-400">
             <img src="/static/img/emo.png" alt="cathedral" />
