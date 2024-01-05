@@ -1,6 +1,8 @@
-import { Outfit } from "next/font/google";
 import Image from "next/image";
 import Header from "./components/header/header";
+
+// fonts
+import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin-ext"],
@@ -22,20 +24,24 @@ export default function Page() {
       >
         {/* container */}
         <div className="container mx-5 md:mx-10 h-screen grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-3">
-          <div className="bg-gray-500 absolute container h-12">Header</div>
-          <div className=" col-span-3 flex justify-center flex-col py-16 lg:py-0">
-            <h1>Portfolio Site</h1>
-            <h2>Made by Ellis Collinson</h2>
+          {/* <div className={`bg-gray-500 absolute container h-12`}>Header</div> */}
+          <div
+            className={`${outfit.className} col-span-3 flex justify-center flex-col py-16 lg:py-0 pr-36`}
+          >
+            <h1>Hey there, I'm Ellis Collinson</h1>
+            <h2>A portfolio built with love (and Next.js).</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores
               atque quae autem fugiat doloremque? Quisquam voluptas, voluptatum,
-              quibusdam.
+              quibusdam, quos voluptate dolorum asperiores atque quae autem
+              fugiat doloremque? Quisquam voluptas, voluptatum, quibusdam, quos
+              voluptate dolorum asperiores atque quae autem fugiat doloremque?
             </p>
           </div>
           <div className="col-span-2 flex justify-center flex-col items-center ">
             <Image
-              src="/static/img/cathedral.png"
+              src="/static/img/ellis.png"
               alt="cathedral"
               width="450"
               height="450"
@@ -47,8 +53,10 @@ export default function Page() {
 
       {/* second */}
       <section className="flex justify-center">
-        <div className="container flex justify-center h-96 items-center p-10 sm:p-20 md:p-40 lg:p-60 flex-col">
-          <h3> web design and development is my thing</h3>
+        <div
+          className={`${outfit.className} container flex justify-center h-96 items-center p-10 sm:p-20 md:p-40 lg:p-96 flex-col text-center`}
+        >
+          <h3 className="pb-10">I’m a web designer and developer.</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores
@@ -61,16 +69,29 @@ export default function Page() {
       </section>
 
       <section
-        className="tw-bg-blue-500 w-full h-screen "
+        className={`${outfit.className} w-full h-screen flex justify-center items-center flex-col p-72`}
         style={{
           // gives the yellow background a slanted edge
-          clipPath: "polygon(100% calc(25vw), 0 0, 0 100%, 100% 100%)",
+          // clipPath: "polygon(100% calc(25vw), 0 0, 0 100%, 100% 100%)",
           backgroundColor: "#EDEDED",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        Hii
+        <h4>I'm also pretty good at other stuff.</h4>
+        <div className="columns-3">
+          <div className="w-96 bg-yellow-400">
+            <img src="/static/img/emo.png" alt="cathedral" />
+          </div>
+
+          <div className="w-96 bg-yellow-400">
+            <img src="/static/img/emo.png" alt="cathedral" />
+          </div>
+
+          <div className="w-96 bg-yellow-400">
+            <img src="/static/img/emo.png" alt="cathedral" />
+          </div>
+        </div>
       </section>
 
       <main className="h-screen">
