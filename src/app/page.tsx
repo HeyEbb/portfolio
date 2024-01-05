@@ -13,10 +13,10 @@ export default function Page() {
     <>
       {/* background holder */}
       <section
-        className="flex justify-center h-[750px] 2xl:h-[900px] w-full"
+        className="flex justify-center h-[900px] sm:h-[900px] md:h-[900px] md:h-[1000px] xl:h-[750px] 2xl:h-[1000px] w-full"
         style={{
           // gives the yellow background a slanted edge
-          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 15vw))",
+          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 20vw))",
           backgroundImage: "url('/static/img/yellow_bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -26,7 +26,7 @@ export default function Page() {
         <div className="container mx-5 md:mx-10 h-full flex flex-col xl:flex-row items-center">
           {/* <div className={`bg-gray-500 absolute container h-12`}>Header</div> */}
           <div
-            className={`${outfit.className} flex flex-col w-2/3 pr-20`}
+            className={`${outfit.className} p-10 flex flex-col xl:w-2/3 lg:pr-20`}
           >
             <h1>Hey there, Im Ellis Collinson</h1>
             <h2>A portfolio built with love (and Next.js).</h2>
@@ -44,7 +44,7 @@ export default function Page() {
               alt="cathedral"
               width="450"
               height="450"
-              className="h-full w-5/12 lg:h-auto "
+              className="h-full w-auto lg:h-auto "
             />
         </div>
       </section>
