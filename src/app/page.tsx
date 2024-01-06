@@ -27,27 +27,33 @@ export default function Page() {
         {/* container */}
         <div
           className="
-        container
-       mx-5 
-       md:mx-10 
-       h-full flex 
-       flex-col 
-       xl:flex-row 
-       items-center"
+          // structure
+          max-w-[1800px]
+
+          // -- flexbox --
+          flex
+          flex-col
+          xl:flex-row
+          justify-center
+          items-center
+
+          // -- padding --
+          pt-10
+          md:pt-20
+          xl:py-36
+          
+          // -- margin --
+          mx-7
+          md:mx-10
+    "
         >
           {/* <div className={`bg-gray-500 absolute container h-12`}>Header</div> */}
           {/* left side, adjusting the padding on behalf of the right side */}
           <div
             className={`
           ${outfit.className} 
-          flex 
-          flex-col 
-          px-10 
-          py-20 
-          lg:pr-2 
-          xl:py-80
-          2xl:py-96
-          xl:w-2/3 
+          w-full
+          xl:w-6/12
           `}
           >
             <h1>Hey there, Im Ellis Collinson</h1>
@@ -62,8 +68,9 @@ export default function Page() {
             width="450" // defining the width and height that next.js will use to optimise the image
             height="450"
             className="   
-           h-full
-           w-auto
+            h-auto
+            w-auto
+            xl:w-5/12    
            "
           />
         </div>
