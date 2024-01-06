@@ -25,21 +25,43 @@ body {
 }
 
 h1 {
-  @apply text-6xl lg:text-6xl 2xl:text-7xl font-bold mb-5 text-neutral-900
+  @apply
+  text-6xl 
+  font-bold mb-5 
+  text-neutral-900
+  lg:text-6xl 
+  2xl:text-7xl 
 }
 
 h2 {
-  @apply text-3xl lg:text-4xl font-light mb-5 text-neutral-800;
+  @apply 
+  text-3xl 
+  font-light 
+  mb-5 
+  text-neutral-800
+  lg:text-4xl 
 }
 
 h3 {
-  @apply text-6xl lg:text-7xl font-semibold mb-2 text-neutral-700;
+  @apply 
+  text-5xl 
+  font-semibold 
+  text-neutral-700
+  lg:text-7xl 
 }
 
 h4 {
-  @apply text-5xl font-bold mb-2 text-neutral-700;
+  @apply 
+  text-5xl 
+  font-bold 
+  mb-2 
+  text-neutral-700
 }
 
 p {
-  @apply text-lg font-light mb-5 text-neutral-900;
+  @apply
+   text-lg 
+   font-light 
+   mb-5 
+   text-neutral-900
 }
