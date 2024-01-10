@@ -103,33 +103,89 @@ export default function Page() {
       <section
         className={`
         ${outfit.className} 
-        w-full 
-        h-screen 
-        flex 
-        justify-center 
-        items-center 
-        flex-col 
-        p-72`}
-        style={{
-          // gives the yellow background a slanted edge
-          // clipPath: "polygon(100% calc(25vw), 0 0, 0 100%, 100% 100%)",
-          backgroundColor: "#EDEDED",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+
+        // -- structure --
+
+        bg-neutral-200
+
+        // -- flexbox --
+        flex
+        flex-col
+        justify-center
+        items-center
+
+        // -- padding --
+
+        // -- margin --
+        `}
       >
-        <h4>Im also pretty good at other stuff.</h4>
-        <div className="columns-3">
-          <div className="w-96 bg-yellow-400">
-            <img src="/static/img/emo.png" alt="cathedral" />
-          </div>
+        <div
+          className={`
+        // -- structure --
+        lg:w-7/12
+        text-center
 
-          <div className="w-96 bg-yellow-400">
-            <img src="/static/img/emo.png" alt="cathedral" />
-          </div>
+        // -- flexbox --
+        flex
+        flex-col
+        items-center
 
-          <div className="w-96 bg-yellow-400">
-            <img src="/static/img/emo.png" alt="cathedral" />
+        // -- padding --
+        py-14
+        lg:py-56
+
+        // -- margin --
+        m-7
+
+        `}
+        >
+          <h3 className="text-4xl">Im also pretty good at other stuff.</h3>
+          <div
+            className="
+            grid 
+            grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-4
+            pt-10
+            justify-items-center
+          "
+          >
+            <div
+              className="
+            flex
+            flex-col
+            gap-4
+            "
+            >
+              <img src="/static/img/emo.png" alt="" />
+              <h4>Graphic Design</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores atque quae autem fugiat doloremque?</p>
+            </div>
+
+            <div
+              className="
+            flex
+            flex-col
+            gap-4
+            "
+            >
+              <img src="/static/img/emo.png" alt="" />
+              <h4>System Architecture</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores atque quae autem fugiat doloremque?</p>
+            </div>
+
+            <div
+              className="
+            flex
+            flex-col
+            gap-4
+            "
+            >
+              <img src="/static/img/emo.png" alt="" />
+              <h4>Design</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas, voluptatum, quibusdam, quos voluptate dolorum asperiores atque quae autem fugiat doloremque?</p>
+            </div>
           </div>
         </div>
       </section>
