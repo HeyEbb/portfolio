@@ -191,8 +191,11 @@ export default function Page() {
             md:grid-cols-2
             xl:grid-cols-2
             2xl:grid-cols-4
+
             gap-10
+
             pt-10
+
             justify-items-center
           "
           >
@@ -274,7 +277,8 @@ export default function Page() {
         <div
           className="
           flex
-          flex-row
+          flex-col
+          lg:flex-row
         "
         >
           <div
@@ -286,7 +290,8 @@ export default function Page() {
             <div
               className="
             bg-green-500
-            h-1/2
+            h-96
+            lg:h-1/2
             "
             >
               Top
@@ -294,7 +299,8 @@ export default function Page() {
             <div
               className="
             bg-green-800
-            h-1/2
+            h-96
+            lg:h-1/2
             "
             >
               Bottom
@@ -302,9 +308,10 @@ export default function Page() {
           </div>
           <div
             className="
-      bg-blue-500
-      w-full
-      h-[75vh]
+            bg-blue-500
+              w-full
+              h-96
+              lg:h-[75vh]
       "
           >
             Right
