@@ -63,6 +63,9 @@ export default function Page() {
           lg:gap-10
           xl:gap-28
 
+          h-screen
+          sm:h-auto
+
           flex-col
           xl:flex-row
 
