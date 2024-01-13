@@ -26,18 +26,24 @@ body {
 
 h1 {
   @apply
-  text-6xl 
-  font-bold mb-5 
-  text-neutral-900
+  /* size */
+  text-5xl 
+  md:text-6xl
   lg:text-6xl 
   2xl:text-7xl 
+  
+  /* weight */
+  font-bold mb-5 
+
+  /* colour */
+  text-neutral-900
 }
 
 h2 {
   @apply 
-  text-3xl 
+  text-2xl 
   font-light 
-  mb-5 
+  mb-5
   text-neutral-800
   lg:text-4xl 
 }
@@ -60,8 +66,28 @@ h4 {
 
 p {
   @apply
-   text-lg 
+   lg:text-xl
    font-light 
    mb-5 
-   text-neutral-900
+   /* text-neutral-900 */
+}
+
+/* core structure */
+
+.custom-structure {
+  @apply
+  flex
+  w-full
+  max-w-[1800px]
+  items-center
+  
+  mx-10
+  md:mx-28
+}
+
+section, header{
+  @apply 
+  flex 
+  justify-center
+  w-full
 }
