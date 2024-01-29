@@ -25,68 +25,60 @@ body {
 }
 
 h1 {
-  @apply
-  /* size */
-  text-5xl 
-  md:text-6xl
-  lg:text-6xl 
-  2xl:text-7xl 
-  
-  /* weight */
-  font-bold mb-5 
-
-  /* colour */
-  text-neutral-900
+  @apply mb-5 
+  text-5xl
+  font-bold 
+  text-neutral-900 
+  md:text-6xl lg:text-6xl 
+  2xl:text-7xl;
+  line-height: 1.1;
 }
 
 h2 {
-  @apply 
+  @apply mb-5 
   text-2xl 
-  font-light 
-  mb-5
+  font-light
   text-neutral-800
-  lg:text-4xl 
+  lg:text-4xl;
 }
 
 h3 {
-  @apply 
-  text-5xl 
+  @apply text-5xl 
   font-semibold 
   text-neutral-700
-  lg:text-7xl 
+  lg:text-7xl;
 }
 
 h4 {
-  @apply 
+  @apply mb-2 
   text-3xl 
   font-bold 
-  mb-2 
-  text-neutral-700
+  text-neutral-700;
 }
 
 p {
-  @apply
-   lg:text-xl
-   font-light 
+  @apply /*
+   */ 
    mb-5 
-   /* text-neutral-900 */
+   font-light text-neutral-900 lg:text-lg;
 }
 
 /* core structure */
 
 .custom-structure {
-  @apply
+  @apply 
+  mx-10
   flex
   w-full
   max-w-[1800px]
   items-center
-  mx-7
-  md:mx-28
+  md:mx-32;
 }
 
-section, header{
+section,
+header {
   @apply 
   flex 
-  justify-center
   w-full
+  justify-center;
 }
