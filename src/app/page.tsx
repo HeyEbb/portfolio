@@ -37,7 +37,7 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[1000px] flex-col-reverse justify-center gap-3 lg:min-h-[900px] xl:flex-row xl:justify-between xl:gap-28">
+          <div className="custom-structure h-screen min-h-[1000px] flex-col-reverse justify-center gap-3 lg:min-h-[1000px] xl:min-h-[700px] xl:flex-row xl:justify-between xl:gap-28">
             {/* left side */}
             <div className={`${outfit.className} xl:w-7/12 text-center xl:text-left`}>
               <h1>Hey there, Im Ellis Collinson</h1>
