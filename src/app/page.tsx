@@ -37,18 +37,23 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[1000px] flex-col-reverse justify-center gap-3 lg:min-h-[1000px] xl:min-h-[700px] xl:flex-row xl:justify-between xl:gap-28">
+          <div className="custom-structure h-screen min-h-[1100px] flex-col-reverse justify-center gap-3 lg:min-h-[1200px] xl:min-h-[700px] xl:flex-row xl:justify-between xl:gap-28">
             {/* left side */}
-            <div className={`${outfit.className} xl:w-7/12 text-center xl:text-left`}>
-              <h1>Hey there, Im Ellis Collinson</h1>
-              <h2>A portfolio built with love (and Next.js).</h2>
-              <p className="mb-10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam voluptas, voluptatum, quibusdam, quos voluptate dolorum
-                asperiores atque quae autem fugiat doloremque? Quisquam
-                voluptas, voluptatum, quibusdam, quos voluptate dolorum
-                asperiores atque
-              </p>
+            <div
+              className={`${outfit.className} text-center xl:w-7/12 xl:text-left`}
+            >
+              <span className="text-3xl font-medium">Hi there,</span>
+              <h1>{`I'm Ellis Collinson.`}</h1>
+              <span className="font-sans text-lg font-normal">
+                {`
+                  I'm a web designer and developer with a passion for creating beautiful, functional, and impactful online experiences. I'm skilled in both the artistic and technical aspects of web development, allowing me to bridge the gap between design vision and seamless execution.
+                `}
+                <br />
+                <br />
+                {`
+                  This website is your peek into my world. Explore my design projects to see how I translate ideas into engaging visuals and user-friendly interfaces. Dive into my development projects to witness my ability to bring those designs to life with efficient and clean code.
+                `}
+              </span>
             </div>
 
             {/* right side */}
@@ -58,7 +63,7 @@ export default function Page() {
                 alt="A picture of Ellis Collinson in grey scale"
                 width="450" // defining the width and height that next.js will use to optimise the image
                 height="450"
-                className="h-auto w-10/12 md:w-7/12 xl:p-16 xl:w-full"
+                className="h-auto w-10/12 md:w-7/12 xl:w-full xl:p-16"
               />
             </div>
           </div>
