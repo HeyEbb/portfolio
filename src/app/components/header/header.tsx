@@ -1,17 +1,17 @@
 import { LuMenu } from "react-icons/lu";
+import Image from "next/image";
+import { FiMenu } from "react-icons/fi";
 
 export default function Header() {
   return (
-    <nav className="absolute flex justify-center z-50 w-full py-6 max-w-screen-xl bg-red-600">
-
-        <span className="font-semibold text-xl min-w-max text-black">
-          Ellis Collinson
-        </span>
-
-        <div className="block lg:flex lg:items-center lg:w-auto">
-          <LuMenu className="text-2xl"/>
-        </div>
-      
-    </nav>
+    <div className="custom-structure mt-5 items-center justify-between ">
+      <Image
+        src="/static/img/ec_logo_black.png"
+        alt="Logo"
+        width="50"
+        height="50"
+      />
+      {/* <FiMenu size={30} className="cursor-pointer" /> */}
+    </div>
   );
 }

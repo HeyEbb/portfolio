@@ -73,7 +73,6 @@ p {
    */ 
    mb-5 
    font-light
-   text-neutral-900 
    lg:text-lg;
 }
 
@@ -84,7 +83,7 @@ p {
   px-10
   flex
   w-full
-  max-w-[1800px]
+  max-w-[2000px]
   items-center
   md:px-32;
 }
