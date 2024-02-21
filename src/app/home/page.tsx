@@ -114,6 +114,8 @@ export default function Page() {
                   className="p-10"
                   src="/static/img/graphic-design.png"
                   alt=""
+                  width={IMAGE_WIDTH}
+                  height={IMAGE_HEIGHT}
                 />
                 <h4>Graphic Design</h4>
                 <p>
@@ -124,7 +126,13 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col gap-4 ">
-                <Image className="p-10" src="/static/img/blueprint.png" alt="" />
+                <Image
+                  className="p-10"
+                  src="/static/img/blueprint.png"
+                  alt=""
+                  width={IMAGE_WIDTH}
+                  height={IMAGE_HEIGHT}
+                />
                 <h4>Web Design & Development</h4>
                 <p>
                   Scoping, designing, and implementing systems is a forte of
@@ -138,6 +146,8 @@ export default function Page() {
                   className="p-10"
                   src="/static/img/cloud-computing.png"
                   alt=""
+                  width={IMAGE_WIDTH}
+                  height={IMAGE_HEIGHT}
                 />
                 <h4>Cloud Computing</h4>
                 <p>
@@ -151,6 +161,8 @@ export default function Page() {
                   className="p-10"
                   src="/static/img/app-development.png"
                   alt=""
+                  width={IMAGE_WIDTH}
+                  height={IMAGE_HEIGHT}
                 />
                 <h4>App Development</h4>
                 <p>
@@ -169,29 +181,33 @@ export default function Page() {
           </h3>
 
           {/* project box is a custom component I built that accepts an array of 4 project objects. */}
-          <ProjectBox 
-          projects={[
-            {
-              title: "Improved Spotify (Design)",
-              description: "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-              image: "/static/img/Improved_spotify.png"
-            },
-            {
-              title: "Personal CMS",
-              description: "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-              image: "/static/img/cms.jpg"
-            },
-            {
-              title: "React Showcase",
-              description: "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-              image: "/static/img/react.jpg"
-            },
-            {
-              title: "Mini Social Network",
-              description: "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-              image: "/static/img/cms.jpg"
-            }
-          ]}
+          <ProjectBox
+            projects={[
+              {
+                title: "Improved Spotify (Design)",
+                description:
+                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                image: "/static/img/Improved_spotify.png",
+              },
+              {
+                title: "Personal CMS",
+                description:
+                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                image: "/static/img/cms.jpg",
+              },
+              {
+                title: "React Showcase",
+                description:
+                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                image: "/static/img/react.jpg",
+              },
+              {
+                title: "Mini Social Network",
+                description:
+                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                image: "/static/img/cms.jpg",
+              },
+            ]}
           />
         </section>
 
