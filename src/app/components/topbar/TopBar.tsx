@@ -2,7 +2,7 @@ import { LuMenu } from "react-icons/lu";
 import Image from "next/image";
 import { FiMenu } from "react-icons/fi";
 
-export default function Header() {
+export default function TopBar() {
   return (
     <div className="custom-structure mt-5 items-center justify-between ">
       <Image

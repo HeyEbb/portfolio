@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Header from "../components/header/Header";
+import TopBar from "../components/topbar/TopBar";
 import ProjectBox from "../components/ProjectBox";
 
 // fonts
@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <>
       <header className="fixed z-40">
-        <Header />
+        <TopBar />
       </header>
       <main>
         {/* setting a fixed header */}
