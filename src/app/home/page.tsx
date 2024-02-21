@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Header from "../components/header/Header";
-import { FiMenu } from "react-icons/fi";
 import ProjectBox from "../components/ProjectBox";
 
 // fonts
@@ -111,7 +110,7 @@ export default function Page() {
             <h3 className="text-6xl">{`Here's what I do.`}</h3>
             <div className="grid grid-cols-1 justify-items-center gap-20 pt-10 md:grid-cols-2 xl:grid-cols-2 xl:gap-24 2xl:grid-cols-4">
               <div className="flex flex-col gap-4 ">
-                <img
+                <Image
                   className="p-10"
                   src="/static/img/graphic-design.png"
                   alt=""
@@ -125,7 +124,7 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col gap-4 ">
-                <img className="p-10" src="/static/img/blueprint.png" alt="" />
+                <Image className="p-10" src="/static/img/blueprint.png" alt="" />
                 <h4>Web Design & Development</h4>
                 <p>
                   Scoping, designing, and implementing systems is a forte of
@@ -135,7 +134,7 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col gap-4 ">
-                <img
+                <Image
                   className="p-10"
                   src="/static/img/cloud-computing.png"
                   alt=""
@@ -148,7 +147,7 @@ export default function Page() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 ">
-                <img
+                <Image
                   className="p-10"
                   src="/static/img/app-development.png"
                   alt=""
