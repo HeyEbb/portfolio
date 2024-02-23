@@ -33,22 +33,17 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[1200px] flex-col-reverse justify-center gap-3 lg:min-h-[1200px] xl:min-h-[800px] xl:flex-row xl:justify-between xl:gap-20">
+          <div className="custom-structure h-screen min-h-[1200px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] xl:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
             {/* left side */}
-            <div className={` text-center xl:w-7/12 xl:text-left`}>
+            <div className={` text-center xl:w-7/12 lg:text-left`}>
               <span className={`${outfit.className} text-3xl font-medium`}>
                 Hi there,
               </span>
               <h1
                 className={`${outfit.className}`}
               >{`I'm Ellis Collinson.`}</h1>
-              <span className="text-lg font-light xl:text-xl">
-                {`I'm a web designer and developer with a passion for creating beautiful, functional, and impactful online experiences. I'm skilled in both the artistic and technical aspects of web development, allowing me to bridge the gap between design vision and seamless execution.`}
-                <br />
-                <br />
-                {`
-                  This website is your peek into my world. Explore my design projects to see how I translate ideas into engaging visuals and user-friendly interfaces. Dive into my development projects to witness my ability to bring those designs to life with efficient and clean code.
-                `}
+              <span className="text-lg font-light xl:text-lg">
+                {`  Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
               </span>
             </div>
 
@@ -59,7 +54,7 @@ export default function Page() {
                 alt="A picture of Ellis Collinson in grey scale"
                 width={IMAGE_WIDTH}
                 height={IMAGE_HEIGHT}
-                className="h-auto w-10/12 md:w-7/12 xl:w-full xl:p-16"
+                className="h-auto w-10/12 md:w-7/12 lg:w-full xl:w-full xl:p-16"
               />
             </div>
           </div>
@@ -68,7 +63,7 @@ export default function Page() {
         {/* about me */}
         <section>
           <div
-            className={`custom-structure m-7 flex-col py-28 text-center lg:px-10 lg:py-48 xl:-mt-32 xl:px-56 xl:py-72`}
+            className={`custom-structure flex-col py-28 text-center lg:px-10 lg:py-48 xl:-mt-32 xl:px-56 xl:py-72`}
           >
             <h3 className={`${outfit.className} pb-8 lg:pb-10`}>
               Welcome to My Creative Playground.
@@ -95,7 +90,7 @@ export default function Page() {
 
         <section
           className={`
-        ${outfit.className} 
+        
         flex
         flex-col
         items-center
@@ -107,17 +102,19 @@ export default function Page() {
             className={` custom-structure flex flex-col items-center py-28 text-center lg:py-48 xl:py-72
         `}
           >
-            <h3 className="text-6xl">{`Here's what I do.`}</h3>
+            <h3
+              className={`text-6xl ${outfit.className}`}
+            >{`Here's what I do.`}</h3>
             <div className="grid grid-cols-1 justify-items-center gap-20 pt-10 md:grid-cols-2 xl:grid-cols-2 xl:gap-24 2xl:grid-cols-4">
               <div className="flex flex-col gap-4 ">
                 <Image
-                  className="p-10"
+                  className="px-5 xl:p-14"
                   src="/static/img/graphic-design.png"
                   alt=""
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                 />
-                <h4>Graphic Design</h4>
+                <h4 className={`${outfit.className} `}>Graphic Design</h4>
                 <p>
                   I love creating small-scale graphics, such as logos and icons.
                   Many of these designs have been uploaded and have seen{" "}
@@ -127,13 +124,15 @@ export default function Page() {
 
               <div className="flex flex-col gap-4 ">
                 <Image
-                  className="p-10"
+                  className="px-5 xl:p-14"
                   src="/static/img/blueprint.png"
                   alt=""
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                 />
-                <h4>Web Design & Development</h4>
+                <h4 className={`${outfit.className} `}>
+                  Web Design & Development
+                </h4>
                 <p>
                   Scoping, designing, and implementing systems is a forte of
                   mine. I have experience with both monolithic and microservice
@@ -143,13 +142,13 @@ export default function Page() {
 
               <div className="flex flex-col gap-4 ">
                 <Image
-                  className="p-10"
+                  className="px-5 xl:p-14"
                   src="/static/img/cloud-computing.png"
                   alt=""
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                 />
-                <h4>Cloud Computing</h4>
+                <h4 className={`${outfit.className} `}>Cloud Computing</h4>
                 <p>
                   I have experience constructing and deploying my own cloud
                   solutions using AWS, Azure, and GCP. I also have experience
@@ -158,13 +157,13 @@ export default function Page() {
               </div>
               <div className="flex flex-col gap-4 ">
                 <Image
-                  className="p-10"
+                  className="px-5 xl:p-14"
                   src="/static/img/app-development.png"
                   alt=""
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
                 />
-                <h4>App Development</h4>
+                <h4 className={`${outfit.className} `}>App Development</h4>
                 <p>
                   Thanks to React Native, I have built a series of mobile apps
                   all with different purposes and audiences. I have also
@@ -175,11 +174,21 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="flex flex-col ">
-          <h3 className="${outfit.className} pb-5 pt-10 text-center text-4xl ">
-            My Personal Projects
-          </h3>
-
+        <section className="flex flex-col items-center">
+          <div className="max-w-4xl p-14 text-center ">
+            <h3
+              className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
+            >
+              Current Projects
+            </h3>
+            <p>
+              {" "}
+              Here are my currently active projects, all of which are in various
+              stages of development. The currently live version of each of these
+              projects are available to view, if there are any projects that are
+              locked behidn a login screen, please contact me for access.
+            </p>
+          </div>
           {/* project box is a custom component I built that accepts an array of 4 project objects. */}
           <ProjectBox
             projects={[

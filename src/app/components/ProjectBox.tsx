@@ -10,7 +10,7 @@ export default function ProjectBox({
   }[];
 }) {
   return (
-    <div className="m-3 grid h-screen min-h-[1200px] grid-cols-2 gap-2">
+    <div className="m-3 grid h-screen min-h-[1200px] grid-cols-1 lg:grid-cols-2 gap-2">
       {projects.map((project, i) => (
         <div
           key={i}
