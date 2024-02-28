@@ -89,7 +89,8 @@ p {
   max-w-[2000px]
   items-center
   px-5
-  md:px-20;
+  md:px-20
+  lg:px-32
 }
 
 section,
