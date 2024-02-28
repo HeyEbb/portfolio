@@ -36,10 +36,12 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[900px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
+          <div className="custom-structure h-screen min-h-[800px] flex-col-reverse justify-center gap-3 sm:min-h-[900px] lg:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
             {/* left side */}
             <div className={`text-center lg:text-left xl:w-7/12`}>
-              <span className={`${outfit.className} text-3xl md:text-5xl font-light`}>
+              <span
+                className={`${outfit.className} text-3xl font-light md:text-5xl`}
+              >
                 Hello,
               </span>
               <h1
@@ -57,7 +59,7 @@ export default function Page() {
                 alt="A picture of Ellis Collinson in grey scale"
                 width={IMAGE_WIDTH}
                 height={IMAGE_HEIGHT}
-                className="h-auto w-10/12 md:w-7/12 lg:w-full xl:p-16"
+                className="h-auto w-7/12 sm:w-6/12 lg:w-full xl:p-16"
               />
             </div>
           </div>
@@ -66,7 +68,7 @@ export default function Page() {
         {/* about me */}
         <section>
           <div
-            className={`custom-structure flex-col py-28 text-center lg:px-10 lg:py-48 xl:-mt-32 xl:px-56 xl:py-72`}
+            className={`custom-structure lg:py-26 flex-col py-28 text-center lg:px-10 xl:-mt-16 xl:px-56 xl:py-44`}
           >
             <h3 className={`${outfit.className} pb-5`}>
               What is this website?
@@ -101,12 +103,12 @@ export default function Page() {
         {/*  */}
         <section className={`bg-neutral-200`}>
           <div
-            className={`custom-structure flex-col items-center py-28 text-center lg:py-48 xl:py-72
+            className={`custom-structure lg:py-26 flex-col items-center py-28 text-center xl:py-44
         `}
           >
             <h3 className={`${outfit.className} pb-5`}>{`My Focus`}</h3>
             <p className="w-10/12">
-              Here are a few of the skulls that I have have been focusing on in
+              Here are a few of the skills that I have have been focusing on in
               the past few years. I have been working on a variety of projects,
               some of which are still in development, and some of which are
               live. I have also been working on a few personal projects, such as
@@ -126,13 +128,13 @@ export default function Page() {
                     imageRoute: "/static/img/cloud-computing.png",
                     title: "DevOps & Cloud Computing",
                     description:
-                    "I have experience with DevOps and Cloud Computing, including AWS, Azure, and GCP. I have also worked with Docker and Kubernetes.",
+                      "I have experience with DevOps and Cloud Computing, including AWS, Azure, and GCP. I have also worked with Docker and Kubernetes.",
                   },
                   {
                     imageRoute: "/static/img/app-development.png",
                     title: "App Development",
                     description:
-                    "Thanks to React Native, I have built a series of mobile apps all with different purposes and audiences. I have also experimented with Flutter.",
+                      "Thanks to React Native, I have built a series of mobile apps all with different purposes and audiences. I have also experimented with Flutter.",
                   },
                   {
                     imageRoute: "/static/img/graphic-design.png",
