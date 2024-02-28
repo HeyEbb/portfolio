@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TopBar from "../components/topbar/TopBar";
-import ProjectBox from "../components/ProjectBox";
+import ProjectBox from "../components/project-box/ProjectBox";
+import SkillBox from "../components/skill-box/SkillBox";
 
 // fonts
 import { Outfit } from "next/font/google";
@@ -14,15 +15,17 @@ export default function Page() {
   const IMAGE_WIDTH = 450;
   const IMAGE_HEIGHT = 450;
 
+  // Core return
   return (
     <>
+      {/* header of the application, currently just holding the logo and the navigation (still in development) */}
       <header className="fixed z-40">
         <TopBar />
       </header>
-      <main>
-        {/* setting a fixed header */}
 
-        {/* background holder */}
+      {/* main content */}
+      <main>
+        {/* background holder, contains a cool yellow slant */}
         <section
           style={{
             // gives the yellow background a slanted edge on the bottom
@@ -33,17 +36,17 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[900px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] lg:flex-row lg:gap-7 xl:min-h-[800px] xl:justify-between xl:gap-20">
+          <div className="custom-structure h-screen min-h-[900px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
             {/* left side */}
-            <div className={` text-center lg:text-left xl:w-7/12`}>
-              <span className={`${outfit.className} text-3xl font-medium`}>
-                Hi there,
+            <div className={`text-center lg:text-left xl:w-7/12`}>
+              <span className={`${outfit.className} text-3xl md:text-5xl font-light`}>
+                Hello,
               </span>
               <h1
                 className={`${outfit.className}`}
               >{`I'm Ellis Collinson.`}</h1>
               <span className="text-lg font-light xl:text-lg">
-                {`  Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
+                {`Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
               </span>
             </div>
 
@@ -54,7 +57,7 @@ export default function Page() {
                 alt="A picture of Ellis Collinson in grey scale"
                 width={IMAGE_WIDTH}
                 height={IMAGE_HEIGHT}
-                className="h-auto w-10/12 md:w-7/12 lg:w-full xl:w-full xl:p-16"
+                className="h-auto w-10/12 md:w-7/12 lg:w-full xl:p-16"
               />
             </div>
           </div>
@@ -65,10 +68,10 @@ export default function Page() {
           <div
             className={`custom-structure flex-col py-28 text-center lg:px-10 lg:py-48 xl:-mt-32 xl:px-56 xl:py-72`}
           >
-            <h3 className={`${outfit.className} pb-8 lg:pb-10`}>
-              Welcome to My Creative Playground.
+            <h3 className={`${outfit.className} pb-5`}>
+              What is this website?
             </h3>
-            <p>
+            <p className="w-10/12">
               This website serves as a comprehensive repository for tracking my
               personal goals, ongoing projects, and notable achievements. Beyond
               being a personal resource, it also functions as a platform to
@@ -85,92 +88,60 @@ export default function Page() {
               the site is poised to evolve into a small-scale Content Management
               System (CMS), facilitating the hosting of a blog to share
               insights, progress updates, and creative ideas.
+              <br />
+              <br />
+            </p>
+            <p className="font-bold">
+              This website is still under very active development.
             </p>
           </div>
         </section>
 
-        <section
-          className={`
-        
-        flex
-        flex-col
-        items-center
-        justify-center
-        bg-neutral-200
-        `}
-        >
+        {/* The 'heres what I do' section */}
+        {/*  */}
+        <section className={`bg-neutral-200`}>
           <div
-            className={` custom-structure flex flex-col items-center py-28 text-center lg:py-48 xl:py-72
+            className={`custom-structure flex-col items-center py-28 text-center lg:py-48 xl:py-72
         `}
           >
-            <h3
-              className={`text-6xl ${outfit.className}`}
-            >{`Here's what I do.`}</h3>
-            <div className="grid grid-cols-1 justify-items-center gap-10 pt-10 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
-              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
-                <Image
-                  className="w-64 mb-2"
-                  src="/static/img/graphic-design.png"
-                  alt=""
-                  width={IMAGE_WIDTH}
-                  height={IMAGE_HEIGHT}
-                />
-                <h4 className={`${outfit.className} `}>Graphic Design</h4>
-                <p>
-                  I love creating small-scale graphics, such as logos and icons.
-                  Many of these designs have been uploaded and have seen{" "}
-                  <b>14,703*</b> downloads and counting .
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
-                <Image
-                  className="w-64 mb-2"
-                  src="/static/img/blueprint.png"
-                  alt=""
-                  width={IMAGE_WIDTH}
-                  height={IMAGE_HEIGHT}
-                />
-                <h4 className={`${outfit.className} `}>
-                  Web Design & Development
-                </h4>
-                <p>
-                  Scoping, designing, and implementing systems is a forte of
-                  mine. I have experience with both monolithic and microservice
-                  architectures.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
-                <Image
-                  className="w-64"
-                  src="/static/img/cloud-computing.png"
-                  alt=""
-                  width={IMAGE_WIDTH}
-                  height={IMAGE_HEIGHT}
-                />
-                <h4 className={`${outfit.className} `}>Cloud Computing</h4>
-                <p>
-                  I have experience constructing and deploying my own cloud
-                  solutions using AWS, Azure, and GCP. I also have experience
-                  with Docker and Kubernetes.
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
-                <Image
-                  className="w-64"
-                  src="/static/img/app-development.png"
-                  alt=""
-                  width={IMAGE_WIDTH}
-                  height={IMAGE_HEIGHT}
-                />
-                <h4 className={`${outfit.className} `}>App Development</h4>
-                <p>
-                  Thanks to React Native, I have built a series of mobile apps
-                  all with different purposes and audiences. I have also
-                  experimented with Flutter.
-                </p>
-              </div>
+            <h3 className={`${outfit.className} pb-5`}>{`My Focus`}</h3>
+            <p className="w-10/12">
+              Here are a few of the skulls that I have have been focusing on in
+              the past few years. I have been working on a variety of projects,
+              some of which are still in development, and some of which are
+              live. I have also been working on a few personal projects, such as
+              this website, and a few others that are still in the planning
+              stages.
+            </p>
+            <div className="grid grid-cols-1 justify-items-center gap-5 pt-10 md:grid-cols-2 xl:grid-cols-4 xl:gap-7">
+              <SkillBox
+                skills={[
+                  {
+                    imageRoute: "/static/img/blueprint.png",
+                    title: "Design & FE Development",
+                    description:
+                      "Initially starting a core design, I have since moved to front-end development, typically using Frameworks such as React, with a focus on Tailwind CSS.",
+                  },
+                  {
+                    imageRoute: "/static/img/cloud-computing.png",
+                    title: "DevOps & Cloud Computing",
+                    description:
+                    "I have experience with DevOps and Cloud Computing, including AWS, Azure, and GCP. I have also worked with Docker and Kubernetes.",
+                  },
+                  {
+                    imageRoute: "/static/img/app-development.png",
+                    title: "App Development",
+                    description:
+                    "Thanks to React Native, I have built a series of mobile apps all with different purposes and audiences. I have also experimented with Flutter.",
+                  },
+                  {
+                    imageRoute: "/static/img/graphic-design.png",
+                    title: "Graphic Design",
+                    description:
+                      "I love creating small-scale graphics, such as logos and icons. Many of these designs have been uploaded and have seen 14,703 (since last check) downloads and counting.",
+                  },
+                ]}
+              />
             </div>
           </div>
         </section>
@@ -207,7 +178,7 @@ export default function Page() {
               {
                 title: "Contract Manager",
                 description:
-                  "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.", 
+                  "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.",
                 image: "/static/img/react.jpg",
               },
               {
