@@ -176,14 +176,13 @@ export default function Page() {
         </section>
 
         <section className="flex flex-col items-center">
-          <div className="max-w-4xl p-14 text-center ">
+          <div className="max-w-4xl p-14 text-center">
             <h3
               className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
             >
               Current Projects
             </h3>
             <p>
-              {" "}
               Here are my currently active projects, all of which are in various
               stages of development. The currently live version of each of these
               projects are available to view, if there are any projects that are
@@ -194,28 +193,28 @@ export default function Page() {
           <ProjectBox
             projects={[
               {
-                title: "Improved Spotify (Design)",
+                title: "Spotify Clone",
                 description:
-                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-                image: "/static/img/Improved_spotify.png",
+                  "I've been working on a Spotify clone (design only for now) using Next.js and Tailwind CSS. The project is still in its early stages, but I'm excited to see how it progresses.",
+                image: "/static/img/iphone_spotify.jpg",
               },
               {
-                title: "Personal CMS",
+                title: "Personal Portfilio / CMS",
                 description:
-                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                  "I'm currently working on a personal CMS using Next.js and Tailwind CSS. The CMS will be used to host a blog, which will be used to share insights, progress updates, and creative ideas.",
                 image: "/static/img/cms.jpg",
               },
               {
-                title: "React Showcase",
+                title: "Contract Manager",
                 description:
-                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
+                  "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.", 
                 image: "/static/img/react.jpg",
               },
               {
-                title: "Mini Social Network",
+                title: "Coming Soon...",
                 description:
-                  "Nostrud non in eiusmod qui incididunt labore enim enim. Dolor irure eiusmod et eiusmod Lorem minim exercitation occaecat aliquip eiusmod adipisicing. Sint dolor ipsum aliqua culpa proident occaecat voluptate ut consequat id pariatur consectetur esse. Dolore sint minim magna nostrud qui pariatur adipisicing quis laboris aliqua. Laborum nostrud cupidatat veniam aliqua ad.",
-                image: "/static/img/cms.jpg",
+                  "This mini-project is still being planned. Please come back soon to see what I'm working on!",
+                image: "/static/img/black.jpg",
               },
             ]}
           />
