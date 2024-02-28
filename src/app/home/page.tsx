@@ -33,9 +33,9 @@ export default function Page() {
           }}
         >
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[1200px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] xl:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
+          <div className="custom-structure h-screen min-h-[900px] flex-col-reverse justify-center gap-3 lg:min-h-[800px] lg:flex-row lg:gap-7 xl:min-h-[800px] xl:justify-between xl:gap-20">
             {/* left side */}
-            <div className={` text-center xl:w-7/12 lg:text-left`}>
+            <div className={` text-center lg:text-left xl:w-7/12`}>
               <span className={`${outfit.className} text-3xl font-medium`}>
                 Hi there,
               </span>
@@ -74,7 +74,8 @@ export default function Page() {
               being a personal resource, it also functions as a platform to
               exhibit my skills. I envision this website as an invaluable tool
               for self-reflection, allowing me to assess my growth and evolution
-              as both a designer and developer. <br />
+              as both a designer and developer.
+              <br />
               <br />
               Constructed using Next.js, a React framework, with styling
               implemented through Tailwind CSS, and design conceptualised using
@@ -105,10 +106,10 @@ export default function Page() {
             <h3
               className={`text-6xl ${outfit.className}`}
             >{`Here's what I do.`}</h3>
-            <div className="grid grid-cols-1 justify-items-center gap-20 pt-10 md:grid-cols-2 xl:grid-cols-2 xl:gap-24 2xl:grid-cols-4">
-              <div className="flex flex-col gap-4 ">
+            <div className="grid grid-cols-1 justify-items-center gap-10 pt-10 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
+              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
                 <Image
-                  className="px-5 xl:p-14"
+                  className="w-64 mb-2"
                   src="/static/img/graphic-design.png"
                   alt=""
                   width={IMAGE_WIDTH}
@@ -122,9 +123,9 @@ export default function Page() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 ">
+              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
                 <Image
-                  className="px-5 xl:p-14"
+                  className="w-64 mb-2"
                   src="/static/img/blueprint.png"
                   alt=""
                   width={IMAGE_WIDTH}
@@ -140,9 +141,9 @@ export default function Page() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 ">
+              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
                 <Image
-                  className="px-5 xl:p-14"
+                  className="w-64"
                   src="/static/img/cloud-computing.png"
                   alt=""
                   width={IMAGE_WIDTH}
@@ -155,9 +156,9 @@ export default function Page() {
                   with Docker and Kubernetes.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 ">
+              <div className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-lg">
                 <Image
-                  className="px-5 xl:p-14"
+                  className="w-64"
                   src="/static/img/app-development.png"
                   alt=""
                   width={IMAGE_WIDTH}
