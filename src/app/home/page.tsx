@@ -103,7 +103,7 @@ export default function Page() {
         {/*  */}
         <section className={`bg-neutral-200`}>
           <div
-            className={`custom-structure lg:py-26 flex-col items-center py-28 text-center xl:py-44
+            className={`custom-structure lg:py-26 flex-col items-center py-28 text-center xl:py-44 
         `}
           >
             <h3 className={`${outfit.className} pb-5`}>{`My Focus`}</h3>
@@ -170,24 +170,32 @@ export default function Page() {
                 description:
                   "I've been working on a Spotify clone (design only for now) using Next.js and Tailwind CSS. The project is still in its early stages, but I'm excited to see how it progresses.",
                 image: "/static/img/iphone_spotify.jpg",
+                status: "Active Development",
+                link: "spotify.elliscollinson.co.uk",
               },
               {
                 title: "Personal Portfilio / CMS",
                 description:
                   "I'm currently working on a personal CMS using Next.js and Tailwind CSS. The CMS will be used to host a blog, which will be used to share insights, progress updates, and creative ideas.",
                 image: "/static/img/cms.jpg",
+                status: "Active Development",
+                link: "elliscollinson.co.uk",
               },
               {
                 title: "Contract Manager",
                 description:
                   "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.",
                 image: "/static/img/react.jpg",
+                status: "Active Development",
+                link: "#",
               },
               {
                 title: "Coming Soon...",
                 description:
                   "This mini-project is still being planned. Please come back soon to see what I'm working on!",
                 image: "/static/img/black.jpg",
+                status: "Planning Stages",
+                link: "#",
               },
             ]}
           />
