@@ -174,7 +174,7 @@ export default function Page() {
                 link: "spotify.elliscollinson.co.uk",
               },
               {
-                title: "Personal Portfilio / CMS",
+                title: "Personal Portfolio / CMS",
                 description:
                   "I'm currently working on a personal CMS using Next.js and Tailwind CSS. The CMS will be used to host a blog, which will be used to share insights, progress updates, and creative ideas.",
                 image: "/static/img/cms.jpg",
