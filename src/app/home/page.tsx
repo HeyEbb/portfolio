@@ -1,7 +1,9 @@
+'use client'
 import Image from "next/image";
 import TopBar from "../components/topbar/TopBar";
 import ProjectBox from "../components/project-box/ProjectBox";
 import SkillBox from "../components/skill-box/SkillBox";
+import PostList from "../blog/components/post-list";
 
 // fonts
 import { Outfit } from "next/font/google";
@@ -18,6 +20,7 @@ export default function Page() {
   // Core return
   return (
     <>
+    <PostList />
       {/* header of the application, currently just holding the logo and the navigation (still in development) */}
       <header className="fixed z-40">
         <TopBar />
@@ -201,7 +204,7 @@ export default function Page() {
           />
         </section>
 
-        <section className="flex flex-col items-center my-20">
+        <section className="my-20 flex flex-col items-center">
           <div className="max-w-4xl p-14 text-center">
             <h3
               className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
@@ -209,11 +212,18 @@ export default function Page() {
               Closed Projects
             </h3>
             <p>
-              I'm currently curating a portfolio showcasing my 50+ most impactful projects. In the meantime, feel free to <a className="underline font-semibold" href="mailto:hello@ebber.dev">reach out to discuss my work</a> in more detail!
+              I'm currently curating a portfolio showcasing my 50+ most
+              impactful projects. In the meantime, feel free to{" "}
+              <a
+                className="font-semibold underline"
+                href="mailto:hello@ebber.dev"
+              >
+                reach out to discuss my work
+              </a>{" "}
+              in more detail!
             </p>
           </div>
           {/* project box is a custom component I built that accepts an array of 4 project objects. */}
-
         </section>
         <footer className="flex flex-col items-center bg-neutral-900">
           <div className="bg w-full bg-yellow-300 p-3 text-center text-neutral-900">
