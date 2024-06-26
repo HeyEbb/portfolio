@@ -153,13 +153,13 @@ export default function Page() {
             <h3
               className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
             >
-              Current Projects
+              Active Personal Projects
             </h3>
             <p>
               Here are my currently active projects, all of which are in various
               stages of development. The currently live version of each of these
               projects are available to view, if there are any projects that are
-              locked behidn a login screen, please contact me for access.
+              locked behind a login screen, please contact me for access.
             </p>
           </div>
           {/* project box is a custom component I built that accepts an array of 4 project objects. */}
@@ -201,6 +201,20 @@ export default function Page() {
           />
         </section>
 
+        <section className="flex flex-col items-center my-20">
+          <div className="max-w-4xl p-14 text-center">
+            <h3
+              className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
+            >
+              Closed Projects
+            </h3>
+            <p>
+              I'm currently curating a portfolio showcasing my 50+ most impactful projects. In the meantime, feel free to <a className="underline font-semibold" href="mailto:hello@ebber.dev">reach out to discuss my work</a> in more detail!
+            </p>
+          </div>
+          {/* project box is a custom component I built that accepts an array of 4 project objects. */}
+
+        </section>
         <footer className="flex flex-col items-center bg-neutral-900">
           <div className="bg w-full bg-yellow-300 p-3 text-center text-neutral-900">
             <p className="m-0">Thank you for visiting my portfolio! 🥳</p>
