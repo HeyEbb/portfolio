@@ -215,7 +215,7 @@ export default function Page() {
                 className="font-semibold underline"
                 href="mailto:hello@ebber.dev"
               >
-                reach out to discuss my work
+                reach out to discuss my work{" "}
               </a>
               in more detail!
             </p>
