@@ -95,7 +95,7 @@ p {
 
 section,
 header {
-  @apply flex 
+  @apply  
   w-full
   justify-center;
 }

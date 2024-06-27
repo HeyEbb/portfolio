@@ -20,7 +20,6 @@ export default function Page() {
   // Core return
   return (
     <>
-    <PostList />
       {/* header of the application, currently just holding the logo and the navigation (still in development) */}
       <header className="fixed z-40">
         <TopBar />
