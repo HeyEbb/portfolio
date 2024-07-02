@@ -22,7 +22,7 @@ export default function MiniHeader() {
         {/* header hero container */}
         <div className="custom-structure h-80">
           {/* left side */}
-          <div className={`text-center lg:text-left xl:w-7/12`}>
+          <div className={`text-left xl:w-7/12`}>
             <h1 className={`${outfit.className}`}>{`Blogs`}</h1>
             <span className="text-lg font-light xl:text-lg">
               {`A collection of my thoughts, ideas, and experiences`}

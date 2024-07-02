@@ -20,12 +20,7 @@ export default function PostList() {
     console.log(posts);
   }, [posts]);
 
-  /* --------------------------------- methods -------------------------------- */
-
-  async function getPosts() {
-    const posts = await client.fetch('*[_type == "post"]');
-    return posts;
-  }
+  /* --------------------------- instantiate client --------------------------- */
 
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -34,10 +29,24 @@ export default function PostList() {
     apiVersion: "2024-05-03",
   });
 
+  /* --------------------------------- methods -------------------------------- */
+
+  async function getPosts() {
+    const posts = await client.fetch(`
+      *[_type == "post"] {
+      title,
+      "mainImage" : mainImage.asset->{url},
+      "excerpt": array::join(string::split((pt::text(body)), "")[0..50], "") + "...",
+      body,
+      slug
+}`);
+    return posts;
+  }
+
   /* --------------------------------- markup -------------------------------- */
 
   return (
-    <section>
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {posts.map((post) => (
         <PostCard key={post._id} post={post} />
       ))}
