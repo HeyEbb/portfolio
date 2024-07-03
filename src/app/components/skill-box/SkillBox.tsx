@@ -12,7 +12,7 @@ export default function SkillBox({ skills }: { skills: Skills[] }) {
       {skills.map((skill, i) => (
         <div
           key={i}
-          className="flex flex-col items-center gap-2 rounded-xl bg-white p-7 shadow-md xl:shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg"
+          className="flex flex-col items-center gap-2 rounded-2xl bg-white p-7 shadow-md xl:shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg"
         >
           <Image
             className="mb-2 w-64 p-5"

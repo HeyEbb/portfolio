@@ -9,7 +9,7 @@ interface Project {
 
 export default function ProjectBox({ projects }: { projects: Project[] }) {
   return (
-    <div className="m-3 grid lg:h-screen min-h-[1200px] grid-cols-1 gap-2 lg:grid-cols-2">
+    <div className=" grid  grid-cols-1 gap-2 lg:grid-cols-4">
       {projects.map((project, i) => (
         <div
           key={i}
