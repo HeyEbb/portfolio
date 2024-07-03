@@ -4,9 +4,25 @@ import { createClient } from "@sanity/client";
 import PostCard from "./post-card";
 
 export default function PostList() {
+  /* -------------------------------- interface ------------------------------- */
+  interface Post {
+    _id: string;
+    title: string;
+    mainImage: {
+      url: string;
+      alt?: string; // Optional alt property for images
+    };
+    excerpt: string;
+    body: any; // Consider specifying a more precise type if possible
+    slug: {
+      current: string;
+    };
+    publishedAt: string; // Add this line to include the missing property
+  }
+
   /* --------------------------------- state -------------------------------- */
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   /* --------------------------------- effects -------------------------------- */
 
@@ -34,19 +50,21 @@ export default function PostList() {
   async function getPosts() {
     const posts = await client.fetch(`
       *[_type == "post"] {
-      title,
-      "mainImage" : mainImage.asset->{url},
-      "excerpt": array::join(string::split((pt::text(body)), "")[0..50], "") + "...",
-      body,
-      slug
-}`);
+        _id,
+        title,
+        "mainImage": mainImage.asset->{url, alt},
+        "excerpt": array::join(string::split((pt::text(body)), "")[0..50], "") + "...",
+        body,
+        slug,
+        publishedAt // Ensure this property is fetched
+    }`);
     return posts;
   }
 
   /* --------------------------------- markup -------------------------------- */
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <PostCard key={post._id} post={post} />
       ))}
