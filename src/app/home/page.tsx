@@ -30,7 +30,7 @@ export default function Page() {
         {/* background holder, contains a cool yellow slant */}
         <section>
           {/* header hero container */}
-          <div className="core-structure mt-8 flex min-h-[800px] w-full items-center rounded-3xl bg-indigo-300 p-20 text-indigo-950">
+          <div className="core-structure mt-8 flex min-h-[800px] w-full items-center rounded-3xl bg-indigo-300 p-10 text-indigo-950 lg:p-20">
             {/* left side */}
             <div className={`text-center lg:text-left xl:w-6/12`}>
               <span className={`text-3xl font-light md:text-6xl`}>
@@ -58,8 +58,8 @@ export default function Page() {
 
         {/* about me */}
         <section>
-          <div className="core-structure flex gap-10 px-20 py-32">
-            <div className={`w-6/12 `}>
+          <div className="core-structure flex flex-col gap-10 xl:flex-row xl:gap-20 xl:px-16 xl:py-28">
+            <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <h3 className={`pb-5`}>What is this website?</h3>
               <p className="">
                 This website serves as a comprehensive repository for tracking
@@ -85,7 +85,7 @@ export default function Page() {
                 This website is still under very active development.
               </p>
             </div>
-            <div className={`w-6/12 `}>
+            <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <h3 className={`pb-5`}>What is this website?</h3>
               <p className="">
                 This website serves as a comprehensive repository for tracking
@@ -121,7 +121,7 @@ export default function Page() {
             className={`core-structure lg:py-26 flex flex-col items-center p-10 py-28 text-center xl:py-44
         `}
           >
-            <h3 className={`pb-5`}>{`What I do best`}</h3>
+            <h3 className={`pb-5`}>{`A little about me.`}</h3>
             <p className="w-10/12">
               Here are a few of the skills that I have have been focusing on in
               the past few years. I have been working on a variety of projects,
