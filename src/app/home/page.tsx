@@ -30,13 +30,13 @@ export default function Page() {
         {/* background holder, contains a cool yellow slant */}
         <section>
           {/* header hero container */}
-          <div className="core-structure mt-8 flex min-h-[800px] w-full items-center rounded-3xl bg-indigo-300 p-10 text-indigo-950 lg:p-20">
+          <div className="core-structure mt-8 flex min-h-[600px] sm:min-h-[800px]  w-full items-center rounded-3xl bg-indigo-300 p-10 text-indigo-950 lg:p-20">
             {/* left side */}
             <div className={`text-center lg:text-left xl:w-6/12`}>
               <span className={`text-3xl font-light md:text-6xl`}>
                 Hi there,
               </span>
-              <h1 className={``}>{`I'm Ellis Collinson.`}</h1>
+              <h1>{`I'm Ellis Collinson.`}</h1>
               <span className="text-lg font-light xl:text-2xl">
                 {`Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
                 {`Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
