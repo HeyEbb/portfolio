@@ -30,9 +30,9 @@ export default function Page() {
         {/* background holder, contains a cool yellow slant */}
         <section>
           {/* header hero container */}
-          <div className="core-structure mt-8 flex min-h-[600px] sm:min-h-[800px]  w-full items-center rounded-3xl bg-indigo-300 p-10 text-indigo-950 lg:p-20">
+          <div className="core-structure mt-8 flex-col-reverse xl:flex-row flex min-h-[600px] sm:min-h-[800px] w-full items-center justify-center rounded-3xl bg-indigo-300 p-11 md:p-16 text-indigo-950 lg:p-20 gap-5 xl:gap-10">
             {/* left side */}
-            <div className={`text-center lg:text-left xl:w-6/12`}>
+            <div className={`text-center xl:text-left xl:w-10/12`}>
               <span className={`text-3xl font-light md:text-6xl`}>
                 Hi there,
               </span>
@@ -44,21 +44,21 @@ export default function Page() {
             </div>
 
             {/* right side */}
-            {/* <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center">
                 <Image
-                  src="/static/img/EllisAbstractDark.png"
+                  src="/static/img/selfie.png"
                   alt="A picture of Ellis Collinson in grey scale"
                   width={IMAGE_WIDTH}
                   height={IMAGE_HEIGHT}
-                  className="h-auto w-7/12 sm:w-6/12 lg:w-full xl:p-16"
+                  className="h-auto w-7/12 sm:w-6/12 lg:w-5/12 xl:w-10/12 xl:p-10"
                 />
-              </div> */}
+              </div>
           </div>
         </section>
 
         {/* about me */}
         <section>
-          <div className="core-structure flex flex-col gap-10 xl:flex-row xl:gap-20 xl:px-16 xl:py-28">
+          <div className="core-structure flex flex-col xl:flex-row xl:gap-20 xl:px-16 xl:py-28">
             <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <h3 className={`pb-5`}>What is this website?</h3>
               <p className="">
@@ -85,7 +85,7 @@ export default function Page() {
                 This website is still under very active development.
               </p>
             </div>
-            <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
+            <div className={`w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <h3 className={`pb-5`}>What is this website?</h3>
               <p className="">
                 This website serves as a comprehensive repository for tracking
@@ -164,7 +164,7 @@ export default function Page() {
         </section>
 
         <section>
-          <div className="core-structure flex flex-col   items-center">
+          <div className="core-structure flex flex-col items-center mb-20">
             <div className="max-w-4xl p-14 text-center">
               <h3 className={`pb-5 pt-10 text-center text-6xl`}>
                 Active Side Projects 🚀

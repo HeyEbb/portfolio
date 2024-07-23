@@ -9,30 +9,15 @@ const outfit = Outfit({
 export default function MiniHeader() {
   return (
     <>
-      {/* <header className="fixed z-40">
+      <header>
         <TopBar />
-      </header> */}
-      <section className="">
-          
-        <div className="bg-indigo-300 text-indigo-950 m-10 h-56 rounded-3xl font-sans flex flex-col justify-center p-14">
+        <div className="m-8 flex h-56 w-full flex-col justify-center rounded-3xl bg-indigo-300 p-14 font-sans text-indigo-950">
           <h1>All Posts</h1>
           <span className="text-lg font-light xl:text-lg">
             A collection of my thoughts, ideas, and experiences
           </span>
         </div>
-
-      </section>
-
-      {/* header hero container */}
-      {/* <div className="custom-structure bg-indigo-400 text-white h-80"> */}
-      {/* left side */}
-      {/* <div className={`text-left xl:w-7/12`}>
-            <h1 className={`${outfit.className}`}>{`Blogs`}</h1>
-            <span className="text-lg font-light xl:text-lg">
-              {`A collection of my thoughts, ideas, and experiences`}
-            </span>
-          </div> */}
-      {/* </div> */}
+      </header>
     </>
   );
 }
