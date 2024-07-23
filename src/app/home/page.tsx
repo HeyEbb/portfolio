@@ -69,7 +69,7 @@ export default function Page() {
                 growth and evolution as both a designer and developer.
               </p>
             </div>
-            <div className={`w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
+            <div className={`w-full p-5 pt-0 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <p className="">
                 Constructed using Next.js, a React framework, with styling
                 implemented through Tailwind CSS, and design conceptualised
@@ -92,7 +92,7 @@ export default function Page() {
         {/*  */}
         <section className={`bg-neutral-100`}>
           <div
-            className={`core-structure lg:py-26 flex flex-col items-center p-10 py-28 text-center xl:py-28
+            className={`core-structure lg:py-26 flex flex-col items-center py-14 text-center lg:p-10 lg:py-28
         `}
           >
             <h3 className={`pb-5`}>{`A little about me.`}</h3>
@@ -139,7 +139,7 @@ export default function Page() {
 
         <section>
           <div className="core-structure mb-20 flex flex-col items-center">
-            <div className="max-w-4xl p-14 text-center">
+            <div className="max-w-4xl p-5 text-center mb-5">
               <h3 className={`pb-5 pt-10 text-center `}>
                 Active Side Projects 🚀
               </h3>
