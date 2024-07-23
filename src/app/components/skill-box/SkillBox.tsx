@@ -21,8 +21,10 @@ export default function SkillBox({ skills }: { skills: Skills[] }) {
             width={450}
             height={450}
           />
+          <div className="flex flex-col justify-between h-full">
           <h4>{skill.title}</h4>
-          <p>{skill.description}</p>
+          <p className="text-sm">{skill.description}</p>
+          </div>
         </div>
       ))}
     </>
