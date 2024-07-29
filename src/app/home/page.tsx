@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import TopBar from "../components/topbar/TopBar";
 import ProjectBox from "../components/project-box/ProjectBox";
 import SkillBox from "../components/skill-box/SkillBox";
+import PostList from "../blog/components/post-list";
 
 // fonts
 import { Outfit } from "next/font/google";
@@ -19,47 +21,35 @@ export default function Page() {
   return (
     <>
       {/* header of the application, currently just holding the logo and the navigation (still in development) */}
-      <header className="fixed z-40">
+      <header>
         <TopBar />
       </header>
 
       {/* main content */}
       <main>
         {/* background holder, contains a cool yellow slant */}
-        <section
-          style={{
-            // gives the yellow background a slanted edge on the bottom
-            clipPath: "polygon(100% 0, 0 0, 0 100%, 100% calc(100% - 17vw))",
-            backgroundImage: "url('/static/img/yellow_bg.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <section>
           {/* header hero container */}
-          <div className="custom-structure h-screen min-h-[800px] flex-col-reverse justify-center gap-3 sm:min-h-[900px] lg:min-h-[800px] lg:flex-row lg:gap-7 xl:justify-between xl:gap-20">
+          <div className="core-structure mt-5 flex min-h-[600px] w-full flex-col-reverse items-center justify-center gap-5 rounded-3xl bg-indigo-300 p-11 text-indigo-950 sm:min-h-[620px] md:p-16 lg:p-20 xl:flex-row xl:gap-10">
             {/* left side */}
-            <div className={`text-center lg:text-left xl:w-7/12`}>
-              <span
-                className={`${outfit.className} text-3xl font-light md:text-5xl`}
-              >
-                Hello,
+            <div className={`text-center xl:w-10/12 xl:text-left`}>
+              <span className={`text-3xl font-light md:text-6xl`}>
+                Hi there,
               </span>
-              <h1
-                className={`${outfit.className}`}
-              >{`I'm Ellis Collinson.`}</h1>
-              <span className="text-lg font-light xl:text-lg">
-                {`Passionate web designer & developer crafting beautiful, functional, and impactful websites. Explore my design & development projects to see ideas come to life!`}
+              <h1 className="mb-5">{`I'm Ellis Collinson.`}</h1>
+              <span className="text-lg font-light xl:text-2xl">
+                {`Strong web architect with a passion for crafting user-centric interfaces and experiences. Adept in both design and development, I build beautiful, functional, and impactful websites and apps.`}
               </span>
             </div>
 
             {/* right side */}
             <div className="flex items-center justify-center">
               <Image
-                src="/static/img/EllisAbstractDark.png"
+                src="/static/img/selfie.png"
                 alt="A picture of Ellis Collinson in grey scale"
                 width={IMAGE_WIDTH}
                 height={IMAGE_HEIGHT}
-                className="h-auto w-7/12 sm:w-6/12 lg:w-full xl:p-16"
+                className="h-auto w-7/12 sm:w-6/12 lg:w-5/12 xl:w-11/12 xl:p-10"
               />
             </div>
           </div>
@@ -67,46 +57,44 @@ export default function Page() {
 
         {/* about me */}
         <section>
-          <div
-            className={`custom-structure lg:py-26 flex-col py-28 text-center lg:px-10 xl:-mt-16 xl:px-56 xl:py-44`}
-          >
-            <h3 className={`${outfit.className} pb-5`}>
-              What is this website?
-            </h3>
-            <p className="w-10/12">
-              This website serves as a comprehensive repository for tracking my
-              personal goals, ongoing projects, and notable achievements. Beyond
-              being a personal resource, it also functions as a platform to
-              exhibit my skills. I envision this website as an invaluable tool
-              for self-reflection, allowing me to assess my growth and evolution
-              as both a designer and developer.
-              <br />
-              <br />
-              Constructed using Next.js, a React framework, with styling
-              implemented through Tailwind CSS, and design conceptualised using
-              Figma, this website reflects a commitment to utilising
-              cutting-edge technologies. Hosted on Vercel, the platform ensures
-              seamless accessibility and performance. In the immediate future,
-              the site is poised to evolve into a small-scale Content Management
-              System (CMS), facilitating the hosting of a blog to share
-              insights, progress updates, and creative ideas.
-              <br />
-              <br />
-            </p>
-            <p className="font-bold">
-              This website is still under very active development.
-            </p>
+          <div className="core-structure flex flex-col xl:flex-row xl:gap-16 xl:px-16 xl:py-28">
+            <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
+              <h3 className={`pb-5`}>What is this website?</h3>
+              <p className="">
+                This website is a comprehensive repository for tracking my
+                personal goals, ongoing projects, and notable achievements. It
+                not only serves as a personal resource but also showcases my
+                skills. I envision it as an invaluable tool for self-reflection,
+                enabling me to assess my growth and evolution as both a designer
+                and developer.
+              </p>
+            </div>
+            <div className={`w-full p-5 pt-0 xl:mt-5 xl:w-6/12 xl:p-0 `}>
+              <p className="">
+                Built with Next.js, a React framework, styled with Tailwind CSS,
+                and designed in Figma, this site embodies a commitment to using
+                cutting-edge technologies. Hosted on Vercel, it guarantees
+                seamless accessibility and performance. In the near future, I
+                plan to transform this site into a small-scale Content
+                Management System (CMS), which will include a blog for sharing
+                insights, progress updates, and creative ideas.
+                <br />
+              </p>
+              <p className="font-bold">
+                This website is still under very active development.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* The 'heres what I do' section */}
         {/*  */}
-        <section className={`bg-neutral-200`}>
+        <section className={`bg-neutral-100`}>
           <div
-            className={`custom-structure lg:py-26 flex-col items-center py-28 text-center xl:py-44 
+            className={`core-structure lg:py-26 flex flex-col items-center py-14 text-center lg:p-10 lg:py-28
         `}
           >
-            <h3 className={`${outfit.className} pb-5`}>{`My Focus`}</h3>
+            <h3 className={`pb-5`}>{`A little about me.`}</h3>
             <p className="w-10/12">
               Here are a few of the skills that I have have been focusing on in
               the past few years. I have been working on a variety of projects,
@@ -132,7 +120,7 @@ export default function Page() {
                   },
                   {
                     imageRoute: "/static/img/app-development.png",
-                    title: "App Development",
+                    title: "Mobile App Development",
                     description:
                       "Thanks to React Native, I have built a series of mobile apps all with different purposes and audiences. I have also experimented with Flutter.",
                   },
@@ -140,7 +128,7 @@ export default function Page() {
                     imageRoute: "/static/img/graphic-design.png",
                     title: "Graphic Design",
                     description:
-                      "I love creating small-scale graphics, such as logos and icons. Many of these designs have been uploaded and have seen 14,703 (since last check) downloads and counting.",
+                      "I love creating small-scale graphics, such as logos and icons. Many of these designs have been uploaded and have seen 25,595 (since last check) downloads and counting.",
                   },
                 ]}
               />
@@ -148,89 +136,82 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="flex flex-col items-center">
-          <div className="max-w-4xl p-14 text-center">
-            <h3
-              className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
-            >
-              Active Personal Projects
-            </h3>
-            <p>
-              Here are my currently active projects, all of which are in various
-              stages of development. The currently live version of each of these
-              projects are available to view, if there are any projects that are
-              locked behind a login screen, please contact me for access.
-            </p>
+        <section>
+          <div className="core-structure mb-20 flex flex-col items-center">
+            <div className="mb-5 max-w-4xl p-5 text-center">
+              <h3 className={`pb-5 pt-10 text-center `}>
+                Active Side Projects 🚀
+              </h3>
+              <p>
+                Here are my currently active projects, all of which are in
+                various stages of development. The currently live version of
+                each of these projects are available to view, if there are any
+                projects that are locked behind a login screen, please contact
+                me for access.
+              </p>
+            </div>
+            {/* project box is a custom component I built that accepts an array of 4 project objects. */}
+            <ProjectBox
+              projects={[
+                {
+                  title: "Spotify Clone",
+                  description:
+                    "I've been working on a Spotify clone (design only for now) using Next.js and Tailwind CSS. The project is still in its early stages, but I'm excited to see how it progresses.",
+                  image: "/static/img/iphone_spotify.jpg",
+                  status: "Active Development",
+                  link: "spotify.elliscollinson.co.uk",
+                },
+                {
+                  title: "Personal Portfolio / CMS",
+                  description:
+                    "I'm currently working on a personal CMS using Next.js and Tailwind CSS. The CMS will be used to host a blog, which will be used to share insights, progress updates, and creative ideas.",
+                  image: "/static/img/cms.jpg",
+                  status: "Active Development",
+                  link: "elliscollinson.co.uk",
+                },
+                {
+                  title: "PaperTrail",
+                  description:
+                    "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.",
+                  image: "/static/img/react.jpg",
+                  status: "Active Development",
+                  link: "document.elliscollinson.co.uk/login",
+                },
+                {
+                  title: "Coming Soon...",
+                  description:
+                    "This mini-project is still being planned. Please come back soon to see what I'm working on!",
+                  image: "/static/img/black.jpg",
+                  status: "Planning Stages",
+                  link: "#",
+                },
+              ]}
+            />
           </div>
-          {/* project box is a custom component I built that accepts an array of 4 project objects. */}
-          <ProjectBox
-            projects={[
-              {
-                title: "Spotify Clone",
-                description:
-                  "I've been working on a Spotify clone (design only for now) using Next.js and Tailwind CSS. The project is still in its early stages, but I'm excited to see how it progresses.",
-                image: "/static/img/iphone_spotify.jpg",
-                status: "Active Development",
-                link: "spotify.elliscollinson.co.uk",
-              },
-              {
-                title: "Personal Portfolio / CMS",
-                description:
-                  "I'm currently working on a personal CMS using Next.js and Tailwind CSS. The CMS will be used to host a blog, which will be used to share insights, progress updates, and creative ideas.",
-                image: "/static/img/cms.jpg",
-                status: "Active Development",
-                link: "elliscollinson.co.uk",
-              },
-              {
-                title: "Contract Manager",
-                description:
-                  "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.",
-                image: "/static/img/react.jpg",
-                status: "Active Development",
-                link: "#",
-              },
-              {
-                title: "Coming Soon...",
-                description:
-                  "This mini-project is still being planned. Please come back soon to see what I'm working on!",
-                image: "/static/img/black.jpg",
-                status: "Planning Stages",
-                link: "#",
-              },
-            ]}
-          />
         </section>
-
-        <section className="my-20 flex flex-col items-center">
-          <div className="max-w-4xl p-14 text-center">
-            <h3
-              className={`${outfit.className} pb-5 pt-10 text-center text-6xl`}
-            >
-              Closed Projects
-            </h3>
-            <p>
-              I&apos;m currently curating a portfolio showcasing my 50+ most
-              impactful projects. In the meantime, feel free to{" "}
+        <footer className="flex-row bg-indigo-300 py-5 ">
+          <div className="core-structure flex w-full justify-between">
+            <span>Built by Ellis Collinson</span>
+            {/* socials area */}
+            <div className="flex gap-5">
               <a
-                className="font-semibold underline"
-                href="mailto:hello@ebber.dev"
+                href="https://www.linkedin.com/in/elliscollinson/"
+                className="hover:text-indigo-900"
               >
-                reach out to discuss my work{" "}
+                LinkedIn
               </a>
-              in more detail!
-            </p>
-          </div>
-          {/* project box is a custom component I built that accepts an array of 4 project objects. */}
-        </section>
-        <footer className="flex flex-col items-center bg-neutral-900">
-          <div className="bg w-full bg-yellow-300 p-3 text-center text-neutral-900">
-            <p className="m-0">Thank you for visiting my portfolio! 🥳</p>
-          </div>
-          <div className="grid w-8/12 grid-cols-3 p-4">
-            <p className="text-white">Built by Ellis Collinson</p>
-            <div></div>
-            <div className="text-right">
-              <p>Version 0.2</p>
+              <a
+                href="https://github.com/HeyEbb"
+                className="hover:text-indigo-900"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://instagram.com/ellis.collinson"
+                className="hover:text-indigo-900"
+              >
+                Instagram
+              </a>
             </div>
           </div>
         </footer>

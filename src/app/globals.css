@@ -26,12 +26,12 @@ body {
 
 h1 {
   @apply mb-5 
-  text-4xl
+  text-5xl
   font-bold 
-  text-neutral-900 
+  /* text-neutral-900  */
   md:text-6xl
   2xl:text-7xl;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 h2 {
@@ -43,10 +43,10 @@ h2 {
 }
 
 h3 {
-  @apply text-5xl 
-  font-semibold 
+  @apply text-4xl 
+  font-bold 
   text-neutral-800
-  lg:text-6xl;
+  xl:text-5xl;
 }
 
 h4 {
@@ -80,22 +80,20 @@ p {
    lg:text-lg;
 }
 
-/* core structure */
-
-/* custom structure is the core container for this project, we don't want the content to get too wide or also too close to the sides.s */
-.custom-structure {
-  @apply flex
-  w-full
-  max-w-[2000px]
+section, header, footer {
+  @apply 
+  flex
+  flex-col
   items-center
-  px-5
-  md:px-20
-  lg:px-32;
+  justify-center
+  w-full
+  px-3
+  sm:px-6 
+  lg:px-8
 }
 
-section,
-header {
-  @apply flex 
-  w-full
-  justify-center;
+
+.core-structure {
+  @apply 
+  max-w-7xl
 }
