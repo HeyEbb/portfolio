@@ -22,7 +22,7 @@ export default function Page() {
     <>
       {/* header of the application, currently just holding the logo and the navigation (still in development) */}
       <header>
-        <TopBar />  
+        <TopBar />
       </header>
 
       {/* main content */}
@@ -189,28 +189,30 @@ export default function Page() {
             />
           </div>
         </section>
-        <footer className="core-structure flex-row justify-between bg-indigo-300 py-5">
-          <span>Built by Ellis Collinson</span>
-          {/* socials area */}
-          <div className="flex gap-5">
-            <a
-              href="https://www.linkedin.com/in/elliscollinson/"
-              className="hover:text-indigo-900"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/HeyEbb"
-              className="hover:text-indigo-900"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://instagram.com/ellis.collinson"
-              className="hover:text-indigo-900"
-            >
-              Instagram
-            </a>
+        <footer className="flex-row bg-indigo-300 py-5 ">
+          <div className="core-structure flex w-full justify-between">
+            <span>Built by Ellis Collinson</span>
+            {/* socials area */}
+            <div className="flex gap-5">
+              <a
+                href="https://www.linkedin.com/in/elliscollinson/"
+                className="hover:text-indigo-900"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/HeyEbb"
+                className="hover:text-indigo-900"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://instagram.com/ellis.collinson"
+                className="hover:text-indigo-900"
+              >
+                Instagram
+              </a>
+            </div>
           </div>
         </footer>
       </main>

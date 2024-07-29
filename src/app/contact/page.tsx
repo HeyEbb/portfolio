@@ -1,7 +1,9 @@
-import React from 'react'
+import MiniHeader from "../components/header/MiniHeader";
 
-export default function Contact() {
+export default function Portfolio() {
   return (
-    <div>page</div>
-  )
+    <>
+      <MiniHeader title="Contact" subtitle="Get in touch with me" />
+    </>
+  );
 }

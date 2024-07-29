@@ -15,9 +15,9 @@ export default function TopBar() {
       <div className="flex flex-row-reverse items-center justify-between md:flex-row">
         <div className="hidden gap-5 font-light md:flex">
           <a href="/">Home</a>
-          <a href="/blog">Blog</a>
+          {/* <a href="/blog">Blog</a>
           <a href="/portfolio">Portfolio</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact</a> */}
         </div>
         <div className="md:hidden ml-4">
           <FiMenu size="1.5em" />
