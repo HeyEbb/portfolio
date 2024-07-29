@@ -190,7 +190,7 @@ export default function Page() {
           </div>
         </section>
         <footer className="flex-row bg-indigo-300 py-5 ">
-          <div className="core-structure flex w-full justify-between">
+          <div className="core-structure flex w-full justify-between flex-col md:flex-row">
             <span>Built by Ellis Collinson</span>
             {/* socials area */}
             <div className="flex gap-5">
