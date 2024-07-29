@@ -6,15 +6,21 @@ const outfit = Outfit({
   subsets: ["latin-ext"],
 });
 
-export default function MiniHeader() {
+export default function MiniHeader({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) {
   return (
     <>
-      <header>
+      <header className="">
         <TopBar />
-        <div className="m-8 flex h-56 w-full flex-col justify-center rounded-3xl bg-indigo-300 p-14 font-sans text-indigo-950">
-          <h1>All Posts</h1>
+        <div className="core-structure mt-5 flex w-full flex-col items-start rounded-3xl bg-indigo-300 p-11 text-indigo-950 md:p-16 ">
+          <h1>{title ? title : "Title"}</h1>
           <span className="text-lg font-light xl:text-lg">
-            A collection of my thoughts, ideas, and experiences
+            {subtitle ? subtitle : "Subtitle"}
           </span>
         </div>
       </header>

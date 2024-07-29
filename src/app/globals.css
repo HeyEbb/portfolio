@@ -80,32 +80,20 @@ p {
    lg:text-lg;
 }
 
-/* core structure */
-
-/* custom structure is the core container for this project, we don't want the content to get too wide or also too close to the sides.s */
-/* .custom-structure {
-  @apply flex
-  w-full
-  max-w-[2000px]
-  items-center
-  px-5
-  md:px-20
-  lg:px-32;
-} */
-
-section, header {
+section, header, footer {
   @apply 
   flex
   flex-col
   items-center
   justify-center
   w-full
-  px-5
-  md:px-20
-  lg:px-28
+  px-3
+  sm:px-6 
+  lg:px-8
 }
+
 
 .core-structure {
   @apply 
-  max-w-[2000px]
+  max-w-7xl
 }

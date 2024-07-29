@@ -22,7 +22,7 @@ export default function Page() {
     <>
       {/* header of the application, currently just holding the logo and the navigation (still in development) */}
       <header>
-        <TopBar />
+        <TopBar />  
       </header>
 
       {/* main content */}
@@ -61,24 +61,23 @@ export default function Page() {
             <div className={`mt-10 w-full p-5 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <h3 className={`pb-5`}>What is this website?</h3>
               <p className="">
-                This website serves as a comprehensive repository for tracking
-                my personal goals, ongoing projects, and notable achievements.
-                Beyond being a personal resource, it also functions as a
-                platform to exhibit my skills. I envision this website as an
-                invaluable tool for self-reflection, allowing me to assess my
-                growth and evolution as both a designer and developer.
+                This website is a comprehensive repository for tracking my
+                personal goals, ongoing projects, and notable achievements. It
+                not only serves as a personal resource but also showcases my
+                skills. I envision it as an invaluable tool for self-reflection,
+                enabling me to assess my growth and evolution as both a designer
+                and developer.
               </p>
             </div>
             <div className={`w-full p-5 pt-0 xl:mt-5 xl:w-6/12 xl:p-0 `}>
               <p className="">
-                Constructed using Next.js, a React framework, with styling
-                implemented through Tailwind CSS, and design conceptualised
-                using Figma, this website reflects a commitment to utilising
-                cutting-edge technologies. Hosted on Vercel, the platform
-                ensures seamless accessibility and performance. In the immediate
-                future, the site is poised to evolve into a small-scale Content
-                Management System (CMS), facilitating the hosting of a blog to
-                share insights, progress updates, and creative ideas.
+                Built with Next.js, a React framework, styled with Tailwind CSS,
+                and designed in Figma, this site embodies a commitment to using
+                cutting-edge technologies. Hosted on Vercel, it guarantees
+                seamless accessibility and performance. In the near future, I
+                plan to transform this site into a small-scale Content
+                Management System (CMS), which will include a blog for sharing
+                insights, progress updates, and creative ideas.
                 <br />
               </p>
               <p className="font-bold">
@@ -139,7 +138,7 @@ export default function Page() {
 
         <section>
           <div className="core-structure mb-20 flex flex-col items-center">
-            <div className="max-w-4xl p-5 text-center mb-5">
+            <div className="mb-5 max-w-4xl p-5 text-center">
               <h3 className={`pb-5 pt-10 text-center `}>
                 Active Side Projects 🚀
               </h3>
@@ -171,12 +170,12 @@ export default function Page() {
                   link: "elliscollinson.co.uk",
                 },
                 {
-                  title: "Contract Manager",
+                  title: "PaperTrail",
                   description:
                     "I'm developing a fullstack Next.js web app that allows for the management of contracts. The app will be used to store, edit, and delete contracts, as well as to create new ones. This includes full JWT authentication and a custom API.",
                   image: "/static/img/react.jpg",
                   status: "Active Development",
-                  link: "#",
+                  link: "document.elliscollinson.co.uk/login",
                 },
                 {
                   title: "Coming Soon...",
@@ -190,16 +189,28 @@ export default function Page() {
             />
           </div>
         </section>
-        <footer className="flex flex-col items-center bg-neutral-900">
-          <div className="bg w-full bg-yellow-300 p-3 text-center text-neutral-900">
-            <p className="m-0">Thank you for visiting my portfolio! 🥳</p>
-          </div>
-          <div className="grid w-8/12 grid-cols-3 p-4">
-            <p className="text-white">Built by Ellis Collinson</p>
-            <div></div>
-            <div className="text-right">
-              <p>Version 0.2</p>
-            </div>
+        <footer className="core-structure flex-row justify-between bg-indigo-300 py-5">
+          <span>Built by Ellis Collinson</span>
+          {/* socials area */}
+          <div className="flex gap-5">
+            <a
+              href="https://www.linkedin.com/in/elliscollinson/"
+              className="hover:text-indigo-900"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/HeyEbb"
+              className="hover:text-indigo-900"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://instagram.com/ellis.collinson"
+              className="hover:text-indigo-900"
+            >
+              Instagram
+            </a>
           </div>
         </footer>
       </main>
